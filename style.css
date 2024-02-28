@@ -1,0 +1,429 @@
+html{
+    background-color:rgba(122, 191, 191, .5);
+    font-family:"Bebas Neue", sans-serif;
+    padding: 0;
+    padding-right: 5%;
+    padding-left: 5%; 
+}
+
+body{
+    
+    padding: 0;
+    padding-top: 160px;
+    
+    position: relative;
+    background-color: #F2F2F2;
+}
+header p{
+    padding: 10px;
+}
+
+header{
+    
+    background-color: #F2F2F2;
+}
+#sidedishes{
+    background-color: #7ABFBF;
+    padding: 10px;
+}
+
+h1{
+    font-weight: bold;
+    text-align: center;
+    
+    
+}
+
+button{
+    color: #EB5428;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+}
+    menu li{ 
+    list-style: none;
+    margin: 0;
+    padding: 0;}
+
+main{
+    padding: 10px;
+}
+
+menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width:100%;
+    height: auto;
+}
+
+h2{
+    text-align: center;
+}
+
+h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+.dish{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 15px;
+    margin-bottom: 25px;
+    
+    
+}
+
+.dish img{
+    width: auto;
+    height: 100px;
+}
+
+#burgermenu{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top:0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    
+}   
+    
+.menu-icon{ 
+    text-align: center;
+}
+    
+
+#navmenu img{ width: 50%;
+
+}
+
+a[href="#Home"]{
+    background-color:#EB5428;
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.dishinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#search{
+    position: absolute;
+    top: 150px;
+    right: 50%;
+    transform: translate(50% ,-50%) ;
+    
+    width: fit-content;
+    display: flex;
+    border: 2px solid #EB5428;
+    
+
+}
+ 
+#search button{
+    background-color: #EB5428;
+    color: #ffffff;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+}
+a{
+    color: #EB5428;
+    display: flex;
+    flex-direction: column-reverse;
+    
+    align-items: center;
+    text-decoration: none;
+    
+}
+
+footer{ margin-top: 10px;
+background-color: #ffffff;
+padding-top: 10px;}
+
+footer img{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+footer p{
+text-align: center;
+font-weight: bold;
+}
+ a[href="#signin"]{
+    color:#030303;
+    list-style-type: none;
+    
+    display: flex;
+    justify-content: center;
+    
+
+    
+}
+#navmenu {
+    display: none;
+    max-height: 100px;
+    transition: max-height .2s ease-out;
+    list-style-type: none;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+label .menu-icon {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label .menu-icon:before, label .menu-icon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+
+#burgermenu input {
+    display: none;
+}
+
+#burgermenu input:checked~ul {
+    max-height: 500px;
+}
+
+#burgermenu input:checked~label  {
+    background: transparent;
+}
+
+#burgermenu input:checked~label:before {
+    transform: rotate(-45deg);
+}
+
+#burgermenu input:checked~label:after {
+    transform: rotate(45deg);
+}
+
+#burgermenu input:checked~label:not(.steps), #burgermenu input:checked~label:not(.steps){
+    top: 0;
+}
+
+@media screen and (min-width: 600px){
+    #navmenu{ 
+        background-color: #ffffff;
+        position: absolute;
+        top: 100px;
+        overflow: visible;
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        right: 50%;
+        transform: translate(50% ,-50%) ;        
+          
+    }
+#search{top:30px;
+z-index: 10;}
+
+#burgermenu{
+
+    
+    display: flex;
+    justify-content: space-between;
+    
+   
+}
+
+    .menu-icon{
+    display: none; 
+    overflow: hidden;
+    }
+
+    
+   #navmenu img{
+        width: 45px;
+ 
+   }
+ #navmenu a{
+    font-size: small;
+ }
+footer{
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: start;
+}
+
+.social-icons{
+    gap: 20px;
+}
+footer img{
+    margin-bottom: 15px;
+}
+#dishcard{
+   display: grid;
+   grid-template-columns: auto auto;
+}
+ #recepe{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+ }
+ main > section{
+    text-align: center;
+ }
+ header{ position: relative;}
+
+menu{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+   
+}
+menu li{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+}
+
+@media screen and (min-width: 768px){
+    #burgermenu{ 
+       
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+   
+}
+ a[href="#Home"]{
+    padding: 15px;
+    
+}    
+#search{
+    top:150px;
+}
+    #navmenu{
+        overflow: visible;
+        position: static;
+        transform: translate(0,0);
+        column-gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+.menu-icon{ display: none;}
+    header{
+        display: flex;}
+        
+ 
+    
+ menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #ffffff;
+    position: static;
+    width: fit-content;
+    border: 2px solid #EB5428;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    padding-top: 25px;
+
+ }
+ header div{ display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+ }  
+  #details div{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+ }
+#details{
+    background-color: #0D0D0D;
+    color:#7ABFBF;
+ }
+ #dishcard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+ }
+ .dish{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: left;
+
+ }
+ .dish img{
+    width: 100%;
+    height: auto;
+    
+ }
+ .rating{ display: flex;
+justify-content: space-between;}
+
+#copyright img, #copyright p{ 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+footer{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+#copyright{
+    display: flex;
+   align-items: left;
+   padding-top: 15px;
+   padding-bottom: 10px;
+   padding-left: 5px;
+
+}
+.social-icons{
+    gap: 50px;
+}
+}
